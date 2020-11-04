@@ -334,7 +334,6 @@ class _SalonFirstState extends State<SalonFirst> {
                                                       String distance_url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&";
                                                       distance_url += "origin=${_currentPosition.latitude},${_currentPosition.longitude}";
                                                       distance_url += "&destinations=${item1.lat},${item1.lng}";
-                                                      distance_url += "&key=AIzaSyD7WpJP8mLh6RsvUDPZj4bzsRSeE9roYXc";
 
                                                       print("distance url = $distance_url");
 
@@ -350,7 +349,7 @@ class _SalonFirstState extends State<SalonFirst> {
                                                 title: Text(item1.name),
 
                                                 subtitle: FutureBuilder(
-                                                  future: Dio().get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origin=${_currentPosition.latitude},${_currentPosition.longitude}&destinations=${item1.lat},${item1.lng}&key=AIzaSyD7WpJP8mLh6RsvUDPZj4bzsRSeE9roYXc"),
+                                                  future: Dio().get("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origin=");
                                                   builder: (context, xyz){
                                                     if(xyz.hasData) {
                                                       Response response = xyz.data;
